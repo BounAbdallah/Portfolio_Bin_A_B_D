@@ -11,7 +11,15 @@
       "Bash(mv portfolio-temp/.[!.]* Portfolio/)",
       "Bash(rm -rf portfolio-temp)",
       "Bash(npm install:*)",
-      "Bash(npx shadcn@latest init --yes --defaults)"
+      "Bash(npx shadcn@latest init --yes --defaults)",
+      "Bash(npx tsc:*)",
+      "Bash(npm list:*)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const keys = Object.keys\\(l\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('git'\\)\\).join\\(', '\\)\\)\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs ls:*)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:source.unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)"
     ]
   }
 }
