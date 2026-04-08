@@ -1,8 +1,8 @@
 "use client";
-import React, { useId, useMemo } from "react";
+import React, { useId } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, SingleOrMultiple } from "@tsparticles/engine";
+import type { Container } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
@@ -51,7 +51,7 @@ export const SparklesCore = (props: ParticlesProps) => {
             fullScreen: { enable: false, zIndex: 1 },
             fpsLimit: 120,
             interactivity: {
-              events: { onClick: { enable: true, mode: "push" }, onHover: { enable: false, mode: "repulse" }, resize: true as any },
+              events: { onClick: { enable: true, mode: "push" }, onHover: { enable: false, mode: "repulse" }, resize: { enable: true } },
               modes: { push: { quantity: 4 }, repulse: { distance: 200, duration: 0.4 } },
             },
             particles: {

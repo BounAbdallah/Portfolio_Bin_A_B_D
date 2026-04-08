@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] },
+  transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
 });
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
               className="text-[13vw] md:text-[8rem] lg:text-[10rem] font-bold text-on-surface leading-[0.88] tracking-tight"
             >
               Bouna
@@ -67,7 +67,7 @@ export default function Hero() {
             {/* Subtitle */}
             <motion.p {...fadeUp(0.5)} className="mt-8 text-base md:text-lg text-on-surface/45 font-light max-w-md leading-relaxed">
               Je conçois et développe des applications web & mobiles modernes pour
-              les entreprises — de l'idée à la mise en ligne.
+              les entreprises — de l&apos;idée à la mise en ligne.
             </motion.p>
           </div>
 
